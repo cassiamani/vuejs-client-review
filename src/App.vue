@@ -1,10 +1,9 @@
 <template>
-  <!-- <div class="q-pa-md"> -->
     <q-layout view="hHh Lpr lff" container style="height: 100vh" class="shadow-2">
-      <q-header elevated class="bg-black">
+      <q-header elevated class="bg-white text-grey-8">
         <q-toolbar>
           <q-btn flat @click="drawer = !drawer" round dense icon="fa fa-bars" />
-          <q-toolbar-title>Header</q-toolbar-title>
+          <q-toolbar-title>Client review</q-toolbar-title>
         </q-toolbar>
       </q-header>
 
@@ -38,28 +37,24 @@
 
       <q-page-container>
         <q-page padding>
-          <p v-for="n in 15" :key="n">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+
+          <router-view  />
+
         </q-page>
       </q-page-container>
     </q-layout>
-  <!-- </div> -->
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    // HelloWorld
   },
 
   data () {
     return {
-      leftDrawerOpen: false,
       drawer: false,
       miniState: true
     }
